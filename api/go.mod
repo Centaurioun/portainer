@@ -1,6 +1,6 @@
 module github.com/portainer/portainer/api
 
-go 1.18
+go 1.23.0
 
 require (
 	github.com/Masterminds/semver v1.5.0
@@ -14,7 +14,7 @@ require (
 	github.com/coreos/go-semver v0.3.0
 	github.com/dchest/uniuri v0.0.0-20160212164326-8902c56451e9
 	github.com/docker/cli v20.10.9+incompatible
-	github.com/docker/docker v20.10.16+incompatible
+	github.com/docker/docker v28.0.0+incompatible
 	github.com/fvbommel/sortorder v1.0.2
 	github.com/fxamacker/cbor/v2 v2.3.0
 	github.com/g07cha/defender v0.0.0-20180505193036-5665c627c814
@@ -23,7 +23,7 @@ require (
 	github.com/go-playground/validator/v10 v10.10.1
 	github.com/gofrs/uuid v4.0.0+incompatible
 	github.com/golang-jwt/jwt/v4 v4.2.0
-	github.com/google/go-cmp v0.5.8
+	github.com/google/go-cmp v0.7.0
 	github.com/gorilla/handlers v1.5.1
 	github.com/gorilla/mux v1.7.3
 	github.com/gorilla/securecookie v1.1.1
@@ -43,12 +43,12 @@ require (
 	github.com/portainer/portainer/third_party/digest v0.0.0-20221201002639-8fd0efa34f73
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/rs/zerolog v1.28.0
-	github.com/stretchr/testify v1.8.1
+	github.com/stretchr/testify v1.10.0
 	github.com/viney-shih/go-lock v1.1.1
 	go.etcd.io/bbolt v1.3.6
-	golang.org/x/crypto v0.0.0-20220315160706-3147a52a75dd
+	golang.org/x/crypto v0.39.0
 	golang.org/x/oauth2 v0.0.0-20211104180415-d3ed0bb246c8
-	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
+	golang.org/x/sync v0.15.0
 	gopkg.in/alecthomas/kingpin.v2 v2.2.6
 	gopkg.in/yaml.v3 v3.0.1
 	k8s.io/api v0.25.3
@@ -68,19 +68,21 @@ require (
 	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.0.1 // indirect
 	github.com/aws/smithy-go v1.9.0 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect
+	github.com/containerd/log v0.1.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/docker/distribution v2.8.1+incompatible // indirect
+	github.com/distribution/reference v0.6.0 // indirect
 	github.com/docker/go-connections v0.4.0 // indirect
 	github.com/docker/go-units v0.4.0 // indirect
 	github.com/emicklei/go-restful/v3 v3.8.0 // indirect
 	github.com/emirpasic/gods v1.12.0 // indirect
 	github.com/evanphx/json-patch v4.12.0+incompatible // indirect
-	github.com/felixge/httpsnoop v1.0.1 // indirect
+	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/go-asn1-ber/asn1-ber v1.3.1 // indirect
 	github.com/go-git/gcfg v1.5.0 // indirect
 	github.com/go-git/go-billy/v5 v5.1.0 // indirect
-	github.com/go-logr/logr v1.2.3 // indirect
+	github.com/go-logr/logr v1.4.3 // indirect
+	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-openapi/jsonpointer v0.19.5 // indirect
 	github.com/go-openapi/jsonreference v0.19.5 // indirect
 	github.com/go-openapi/swag v0.19.14 // indirect
@@ -106,6 +108,7 @@ require (
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/mitchellh/mapstructure v1.1.2 // indirect
+	github.com/moby/docker-image-spec v1.3.1 // indirect
 	github.com/moby/spdystream v0.2.0 // indirect
 	github.com/moby/term v0.0.0-20210619224110-3f7ff695adc6 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
@@ -116,7 +119,7 @@ require (
 	github.com/opencontainers/image-spec v1.0.2 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/sergi/go-diff v1.1.0 // indirect
-	github.com/sirupsen/logrus v1.8.1 // indirect
+	github.com/sirupsen/logrus v1.9.3 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/tomasen/realip v0.0.0-20180522021738-f0c99a92ddce // indirect
 	github.com/x448/float16 v0.8.4 // indirect
@@ -124,13 +127,19 @@ require (
 	github.com/xeipuuv/gojsonpointer v0.0.0-20180127040702-4e3ac2762d5f // indirect
 	github.com/xeipuuv/gojsonreference v0.0.0-20180127040603-bd5ef7bd5415 // indirect
 	github.com/xeipuuv/gojsonschema v1.2.0 // indirect
-	golang.org/x/net v0.2.0 // indirect
-	golang.org/x/sys v0.2.0 // indirect
-	golang.org/x/term v0.2.0 // indirect
-	golang.org/x/text v0.4.0 // indirect
+	go.opentelemetry.io/auto/sdk v1.1.0 // indirect
+	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.62.0 // indirect
+	go.opentelemetry.io/otel v1.37.0 // indirect
+	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp v1.37.0 // indirect
+	go.opentelemetry.io/otel/metric v1.37.0 // indirect
+	go.opentelemetry.io/otel/trace v1.37.0 // indirect
+	golang.org/x/net v0.41.0 // indirect
+	golang.org/x/sys v0.33.0 // indirect
+	golang.org/x/term v0.32.0 // indirect
+	golang.org/x/text v0.26.0 // indirect
 	golang.org/x/time v0.0.0-20220210224613-90d013bbcef8 // indirect
 	google.golang.org/appengine v1.6.7 // indirect
-	google.golang.org/protobuf v1.28.0 // indirect
+	google.golang.org/protobuf v1.36.6 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
